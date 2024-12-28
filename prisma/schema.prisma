@@ -16,9 +16,16 @@ datasource db {
 
  model AddProject {
    id String @id @default(uuid())
-   name String
+   name String 
    description String
+  images      String   @default("")
    projectLink String
    createdAt DateTime @default(now())
    updateAt DateTime @updatedAt
  }
+
+ model Skill {
+  id    String @id @default(uuid())
+  name  String
+  image String
+}
